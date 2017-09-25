@@ -1,0 +1,119 @@
+<!--
+  Generated template for the AppointTime page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>选择预约时间</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="bg-cover">
+    <div class="search-item doctor-info" (click)="gotoPage()">
+      <img src="./assets/icon/me.png" alt="">
+      <span>
+          <div>医生姓名</div>
+          <div class="search-clinic-name">诊所信息</div>
+        </span>
+      <div class="arrow-right address-arrow-right"></div>
+    </div>
+    <div class="appoint-time">可预约时间</div>
+    <div class="appoint-contant">
+      <div class="appoint-item" (click)="checkappoint(1)">
+        <span>2017-07-01 下午</span>
+        <span class="remain-num">还有5个号</span>
+        <span class="appoint-check" [ngStyle]="{ display: currentId == 1? 'block':'none' }"><img src="./assets/icon/打勾.png" alt=""> </span>
+      </div>
+      <div class="appoint-item" (click)="checkappoint(2)">
+        <span>2017-07-01 下午</span>
+        <span class="remain-num">还有5个号</span>
+        <span class="appoint-check" [ngStyle]="{ display: currentId == 2? 'block':'none' }"><img src="./assets/icon/打勾.png" alt=""> </span>
+      </div>
+      <div class="appoint-item" (click)="checkappoint(3)">
+        <span>2017-07-01 下午</span>
+        <span class="remain-num">还有5个号</span>
+        <span class="appoint-check" [ngStyle]="{ display: currentId == 3? 'block':'none' }"><img src="./assets/icon/打勾.png" alt=""> </span>
+      </div>
+    </div>
+
+    <div class="appoint-btn">
+      <button class="appoint-botton" (click)="confirmAppoint()">确认预约</button>
+    </div>
+
+    <div class="appoint-time">已预约满时间</div>
+    <div class="appoint-contant">
+      <div class="appoint-item">
+        <span>2017-07-01 下午</span>
+        <span class="userd-num">已满</span>
+      </div>
+    </div>
+  </div>
+  <!-- 弹框 -->
+  <div class="angular-cover" [hidden]="isHiddenInfo">
+    <div class="white_content appoint-white">
+      <span class="appoint-add-cancel" (click)="hidden()">取消</span>
+      <div class="appoint-add">
+        <div class="appoint-add-title"> <span>真实姓名</span> <span class="userinfo-import">*重要信息</span></div>
+        <div> <input type="text" class="appoint-input" /></div>
+        <div class="appoint-add-title"> <span>联系手机</span> <span class="userinfo-import">*重要信息</span></div>
+        <div> <input type="text" class="appoint-input" /></div>
+        <div class="appoint-add-title"> <span>短信验证码</span></div>
+        <div class="appoint-code">
+          <input type="text" class="appoint-input" />
+          <span>发送验证码</span>
+        </div>
+        <div class="appoint-add-btn">
+          <button class="appoint-botton appoint-add-botton">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 弹框 -->
+  <div class="angular-cover" [hidden]="isHiddenNum">
+    <div class="white_content appoint-num">
+      <div class="appoint-num-title">预约号</div>
+      <div class="appoint-num-contant">
+        <div class="appoint-add-item">
+          第35号 就诊时间: 21:16
+          <span class="appoint-check appoint-add-check"><img src="./assets/icon/打勾.png" alt=""> </span>
+        </div>
+        <div class="appoint-add-item">
+          第35号 就诊时间: 21:16
+          <span class="appoint-check appoint-add-check"><img src="./assets/icon/打勾.png" alt=""> </span>
+        </div>
+        <div class="appoint-add-item">
+          第35号 就诊时间: 21:16
+          <span class="appoint-check appoint-add-check"><img src="./assets/icon/打勾.png" alt=""> </span>
+        </div>
+        <div class="appoint-add-item">
+          第35号 就诊时间: 21:16
+          <span class="appoint-check appoint-add-check"><img src="./assets/icon/打勾.png" alt=""> </span>
+        </div>
+        <div class="appoint-add-item">
+          第35号 就诊时间: 21:16
+          <span class="appoint-check appoint-add-check"><img src="./assets/icon/打勾.png" alt=""> </span>
+        </div>
+        <div class="appoint-add-item">
+          第35号 就诊时间: 21:16
+          <span class="appoint-check appoint-add-check"><img src="./assets/icon/打勾.png" alt=""> </span>
+        </div>
+        <div class="appoint-add-item">
+          第35号 就诊时间: 21:16
+          <span class="appoint-check appoint-add-check"><img src="./assets/icon/打勾.png" alt=""> </span>
+        </div>
+        <div class="appoint-add-item">
+          第35号 就诊时间: 21:16
+          <span class="appoint-check appoint-add-check"><img src="./assets/icon/打勾.png" alt=""> </span>
+        </div>
+      </div>
+      <div class="appoint-num-cancel" (click)="hidden()">关闭</div>
+    </div>
+  </div>
+</ion-content>

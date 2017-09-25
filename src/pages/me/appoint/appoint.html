@@ -1,0 +1,42 @@
+<!--
+  Generated template for the Appoint page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>选择预约医生</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="search-doctor">
+    <span class="search-icon">
+        <img src="./assets/icon/搜索.png" alt="">
+      </span>
+    <input type="text" class="search-input" />
+    <span class="search-cancel-icon">
+        <img src="./assets/icon/取消.png" alt="">
+      </span>
+    <span class="search-cancel" (click)="gotoback()">取消</span>
+  </div>
+  <div class="freequent-doctor">
+    <div>经常约的医生</div>
+    <span>陈志彬</span>
+  </div>
+  <div class="search-doctor-list">
+     <p>医生列表</p>
+     <div class="search-item" (click)="gotoPage()">
+       <img src="./assets/icon/me.png"  alt="">
+       <span>
+         <div>医生姓名</div>
+         <div class="search-clinic-name">诊所信息</div>
+       </span>
+     </div>
+  </div>
+  <div class="load-more">没有更多了</div>
+</ion-content>

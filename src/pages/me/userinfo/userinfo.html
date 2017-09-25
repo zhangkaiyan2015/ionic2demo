@@ -1,0 +1,59 @@
+<!--
+  Generated template for the Userinfo page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>我的联系方式</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="bg-cover">
+    <div class="userinfo-item">
+      <p>
+        <span>真实姓名</span>
+        <span class="userinfo-import">*重要信息</span>
+      </p>
+      <div class="userinfo-desc" (click)="gotoPage('Username')">
+        请准确填写
+        <span class="arrow-right"></span>
+      </div>
+    </div>
+    <div class="userinfo-item">
+      <p>
+        <span>联系手机</span>
+        <span class="userinfo-import">*重要信息</span>
+      </p>
+      <div class="userinfo-desc" (click)="gotoPage('Telephone')">
+        请准确填写
+        <span class="arrow-right"></span>
+      </div>
+    </div>
+    <div class="userinfo-item">
+      <p>
+        <span>身份证号码</span>
+        <span class="userinfo-import">*重要信息</span>
+      </p>
+      <div class="userinfo-desc"(click)="gotoPage('Idnumber')">
+        请准确填写
+        <span class="arrow-right"></span>
+      </div>
+    </div>
+    <div class="userinfo-item">
+      <p>
+        <span>联系地址</span>
+
+      </p>
+      <div class="userinfo-desc"(click)="gotoPage('Address')">
+        点击选择联系地址
+        <span class="arrow-right"></span>
+      </div>
+    </div>
+  </div>
+</ion-content>
